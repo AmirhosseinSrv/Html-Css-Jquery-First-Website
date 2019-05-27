@@ -1,0 +1,445 @@
+#slideshow {
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    padding: 0% 0% 50% 0%;
+}
+
+#slideshow > div {
+    position: absolute;
+    width: 100%;
+    height: 150%;
+}
+
+#slideshow > div > img {
+    width:100%;
+    height:100%;
+}
+
+#slideshow:hover i, #slideshow:hover .slider-dots{
+    opacity: 1;
+}
+
+.slidebtn {
+    z-index:99999999;
+    background:transparent;
+    outline:none;
+    border:none;
+    transition: all 0.3s;
+    padding:0 10px 0 10px;
+}
+
+.slidebtn:active,
+.slidedtn:focus {
+    outline:none;
+    transform: scale(1.2);
+}
+
+.slidebtn i {
+    color:#FFF;
+    font-size:72px;
+    opacity: 0.2;
+    transition: all 0.3s;
+}
+
+.slidebtn i:active {
+    color: #1e1eff;
+}
+
+.prev {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+}
+
+.next {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+
+
+.slider-dots {
+    opacity: 0.2;
+    list-style: none;
+    display: inline-block;
+    white-space:nowrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    position:absolute;
+    left:50%;
+    transform: translate(-50%, 0);
+    z-index:99;
+    transition: all 0.3s;
+    top: 80%;
+}
+
+.slider-dots li {
+    color: #000;
+    display: inline;
+    font-size: 48px;
+    margin: 5px 5px;
+    cursor:pointer;
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s;
+}
+
+.slider-dots li img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s;
+}
+
+.slider-dots li img:hover {
+    transform: scale(1.2);
+}
+
+.slider-dots li img:active {
+    transform: scale(0.9);
+}
+
+.slider-dots li.active-dot {
+    color: #fff;
+}
+
+body {
+    font-family: "BNazanin";
+    direction: rtl;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+#navbar {
+    background-color: rgba(100, 100, 197,0.5);
+    width: 100%;
+    position: fixed;
+    padding: 1% 0;
+    margin: 0;
+    transition: all 0.5s;
+    z-index: 9999;
+}
+
+#navbar:hover {
+    background-color: rgba(100, 100, 197,1);
+}
+
+#navbar span {
+    color: white;
+    padding: 1% 1%;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+#navbar span:hover {
+    background-color: rgb(82, 82, 158);
+}
+
+a {
+    text-decoration-line: none;
+    color: white;
+}
+
+.mod {
+    position: fixed;
+    top: 200px;
+    width: 50%;
+    text-align: center;
+    margin-right: 20%;
+    z-index: -2;
+}
+
+#fmodal > div {
+    background-color: white;
+    padding: 30px;
+    border: black solid 3px;
+    border-radius: 10px;
+    z-index: 100;
+    transition: all 0.7s;
+}
+
+#fmodal {
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    height: 200%;
+    z-index: -10;
+    position: fixed;
+    top: 0;
+    transition: all 1s;
+    opacity: 0;
+}
+
+#fmodal:target {
+    opacity: 1;
+    z-index: 9999;
+    transform: translateY(-100px);
+}
+
+
+#smodal > div {
+    background-color: white;
+    padding: 30px;
+    border: black solid 3px;
+    border-radius: 10px;
+    z-index: 100;
+    transition: all 0.7s;
+}
+
+#smodal {
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    height: 200%;
+    z-index: -10;
+    position: fixed;
+    top: 0;
+    transition: all 1s;
+    opacity: 0;
+}
+
+#smodal:target {
+    opacity: 1;
+    z-index: 9999;
+    transform: translateY(-100px);
+}
+
+.close_modal a{
+    color: black;
+    background-color: white;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    padding: 1% 0.5% 0 0.5%;
+    border-radius: 50%;
+    border: 2px black solid;
+    z-index: 999;
+    position: absolute;
+    top: -10px;
+    right: -10px; 
+}
+
+.close_modal a:hover {
+    background-color: gray;
+}
+
+#top {
+    color: black;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 999;
+    background-image: url("585e47a1cb11b227491c3389.png");
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+}
+
+#none {
+    position: absolute;
+    top: 0;
+}
+
+#down {
+    background-image: url("white-arrow-down-png-15.png");
+    width: 100%;
+    padding: 20px 0;
+    display: inline-block;
+    background-size: 50px 40px;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-color: rgba(15, 43, 167, 0.5);
+    position: relative;
+    top: 300px;
+    border-radius: 10px;
+}
+
+#footer {
+    color: black;
+    position: relative;
+    width: 96%;
+    padding: 2%;
+    background-color:rgba(80, 68, 185, 0.5);
+    text-align: center;
+    top: 290%;
+    transition: all 0.5s;
+    visibility: hidden;
+}
+
+#footer:hover {
+    font-size: 120%;
+    background-color:rgba(168, 163, 216, 0.1);
+}
+
+#wrapper {
+    background-color: rgba(21, 37, 107, 0.5);
+    position: absolute;
+    top: 350px;
+    width: 100%;
+    visibility: hidden;
+}
+
+#about {
+    background-color: rgba(15, 43, 167, 1);
+    margin-top: 20px;
+    color: beige;
+    border: 3px black solid;
+    border-radius: 30px 10px;
+    padding: 10px;
+    height: auto;
+    width: 15%;
+    overflow: auto;
+    text-align: justify;
+    float: right;
+    transition: all 0.5s;
+    margin-right: 20px;
+}
+
+#about:hover {
+    background-color: rgba(15, 43, 167, 0.5);
+    transform: scale(1.15);
+}
+
+#maintext {
+    margin-top: 20px;
+    width: 40%;
+    float: right;
+    margin-right: 18%;
+    margin-left: 5%;
+    text-align: justify;
+    text-align: center;
+    background-color: rgba(15, 43, 167, 1);
+}
+
+#menu {
+    margin-top: 20px;
+    width: 10%;
+    float: right;
+    margin-right: 5%;
+    direction: ltr;
+    padding: 0;
+}
+
+#menu ul {
+    padding: 0;
+    margin: 0; 
+}
+
+#menu li {
+    list-style: none;
+    border: 1px black solid;
+    border-radius: 5px;
+    width: 100px;
+}
+
+#menu a {
+    display: block;
+    width: auto;
+    color: white;
+    transition: all 0.5s;
+    text-decoration-line: none;
+}
+
+#menu a:hover {
+    background-color: rgba(79, 79, 173, 0.7);
+    border-radius: 5px;
+    padding: 2px;
+}
+
+@keyframes texts {
+    0%   {border-radius: 50px 10px; background-color: rgba(67, 86, 172, 0.5);}
+    25%  {border-radius: 40px 20px; transform: translateY(-10px); background-color: rgba(49, 70, 163, 0.5);}
+    50%  {border-radius: 30px 30px; background-color: rgba(38, 59, 151, 0.5);}
+    75%  {border-radius: 20px 40px; background-color: rgba(32, 56, 165, 0.5);}
+    100% {border-radius: 10px 50px; transform: scale(1.2); background-color: rgba(15, 43, 167, 0.5);}
+}
+
+.maintext {
+    border: 3px black solid;
+    border-radius: 15px;
+    margin: 50px 10px;
+    animation-name: texts;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+    animation-play-state: paused;
+    transition: all 0.5s;
+}
+
+.maintext:hover {
+    background-color: rgba(15, 43, 167, 0.5);
+    transform: scale(1.2);
+    border-radius: 10px 50px;
+    animation-play-state: running;
+    box-shadow: 7px 7px 7px 7px rgba(0, 0, 0, 0.7);
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 53px;
+    background-color: rgba(79, 79, 173, 0.7);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(79, 79, 173, 0.5);
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 100%;
+    background-color: #555;
+    color: #fff;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-size: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    text-align: center;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+  
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
